@@ -5,6 +5,7 @@ const { query } = require('express');
 
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Define paths for Express config
 const publicDirecrotyPath = path.join(__dirname,'../public');
@@ -124,13 +125,6 @@ app.get('/weather',(req, res)=>{
     });
 });
 
-
-app.listen(3000, ()=>{
-    console.log('Server is up on port 3000.');
+app.listen(port, ()=>{
+    console.log('Server is up on port', port);
 });
-
-// app.com
-
-// app.com/help
-
-// app.com/about
